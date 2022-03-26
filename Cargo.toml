@@ -1,0 +1,25 @@
+[package]
+name = "protoc-gen-tonic"
+authors = ["Tuetuopay <tuetuopay@me.com>"]
+categories = ["network-programming", "asynchronous"]
+description = "protoc plugin of `tonic` gRPC implementation."
+edition = "2021"
+homepage = "https://github.com/Tuetuopay/protoc-gen-tonic"
+keywords = ["rpc", "grpc", "async", "codegen", "protobuf"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/Tuetuopay/protoc-gen-tonic"
+version = "0.6.2"
+
+[dependencies]
+anyhow = "1"
+prost-types = { version = "0.9", default-features = false }
+protoc-gen-prost = "0.9"
+tonic-build = { version = "0.6", default-features = false, features = ["prost"] }
+
+[patch.crates-io]
+prost = { git = "https://github.com/tokio-rs/prost.git", branch = "master" }
+prost-build = { git = "https://github.com/tokio-rs/prost.git", branch = "master" }
+prost-types = { git = "https://github.com/tokio-rs/prost.git", branch = "master" }
+protoc-gen-prost = { git = "https://github.com/Tuetuopay/protoc-gen-prost", branch = "master" }
+tonic-build = { git = "https://github.com/Tuetuopay/tonic.git", branch = "api-expose" }
