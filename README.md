@@ -1,3 +1,10 @@
+THIS IS NOT THE PLUGIN PUBLISHED ON CRATES.IO.
+
+If you installed the plugin through `cargo install protoc-gen-tonic`, then the
+plugin you installed is the one from https://github.com/neoeinstein/protoc-gen-prost.
+
+This repository is kept for visibility and because some people depend on it.
+
 # protoc-gen-tonic
 
 A `protoc` plugin to generate Tonic code.
